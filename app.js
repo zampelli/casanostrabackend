@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.render("./layouts/main");
 });
 
-app.post("send", (req, res) => {
+app.post("/send", (req, res) => {
   const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
