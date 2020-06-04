@@ -53,11 +53,19 @@ button {
   font-family: "Open sans", sans-serif;
   font-size: 14px;
   cursor: pointer;
+  border: 1px solid #d4d4d4;
 }
 
 .menu-content {
   margin-top: 60px;
 }
+
+/* .menu-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+} */
 
 .menu-content h1 {
   font-family: "Muli", sans-serif;
@@ -68,38 +76,21 @@ button {
 .menu-content h3 {
   font-family: "Muli", sans-serif;
   color: rgb(54, 54, 54);
+  margin-top: 30px;
 }
 
 .menu-content p {
   font-family: "Open sans", sans-serif;
   color: rgb(102, 102, 102);
+  margin-top: -5px;
+  width: 300px;
+  display: inline-block;
 }
 
 .price > p {
   margin-top: 50px;
   color: #b11313;
 }
-
-.food-row-one {
-  padding-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.food-row-two {
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.flex-item {
-  padding: 0 10px;
-}
-
-.flex-item2 {
-  padding: 0 10px;
-}
-
 /* -------------- */
 
 /* --- contact form --- */

@@ -31,6 +31,7 @@ app.post("/send", (req, res) => {
     <li>Phone Number: ${req.body.Phone}</li>
     <li>Guest Number: ${req.body.GuestNumber}</li>
     <li>Menu Option: ${req.body.MenuOptions}</li>
+    <li>Event Date: ${req.body.EventDate}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.Message}</p>
@@ -51,7 +52,7 @@ app.post("/send", (req, res) => {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: '"Nodemailer Contact" <sandboxcasanostra@outlook.com>', // sender address
-      to: "sandboxcasanostra@outlook.com", // list of receivers
+      to: "milano121293@gmail.com", // list of receivers
       subject: "Node Contact Request", // Subject line
       text: "Hello world?", // plain text body
       html: output // html body
