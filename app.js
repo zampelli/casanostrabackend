@@ -5,6 +5,8 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const nodemailer = require("nodemailer");
 const app = express();
+require('dotenv').config();
+
 
 // view engine setup
 app.engine("handlebars", exphbs());
@@ -44,15 +46,15 @@ app.post("/send", (req, res) => {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: 'sandboxcasanostra@outlook.com', // generated ethereal user
-        pass: 'casanostraPizza2007' // generated ethereal password
+        user: process.env.EMAIL, // generated ethereal user
+        pass: process.env.PASSWORD // generated ethereal password
       }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: '"Nodemailer Contact" <sandboxcasanostra@outlook.com>', // sender address
-      to: "milano121293@gmail.com", // list of receivers
+      to: process.env.TOWHO, // list of receivers
       subject: "Node Contact Request", // Subject line
       text: "Hello world?", // plain text body
       html: output // html body
